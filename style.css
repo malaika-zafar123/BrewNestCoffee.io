@@ -12,7 +12,7 @@ body {
   --primary-color: #38231e;
   --text-color: #c47720;
   --color: #c77d29;
-  --color3:#da9f5b;
+  --color3: #da9f5b;
   --secondary-color: #ffff;
   --simple-color: #e2e2e2;
   --color2: #423d3d;
@@ -293,7 +293,7 @@ header .next:hover {
 .style p {
   font-size: 20px;
   color: var(--color2);
-width: 300px;
+  width: 300px;
 }
 
 .btn2 {
@@ -628,7 +628,7 @@ width: 300px;
 .reservation p {
   color: var(--simple-color);
   font-size: 16px;
-  width: 400px;
+  width: 300px;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -665,7 +665,7 @@ width: 300px;
 .form input,
 .form select {
   background-color: var(--primary-color);
-  color:var(--secondary-color);
+  color: var(--secondary-color);
   top: 20%;
   display: block;
   margin: 10px;
@@ -674,7 +674,8 @@ width: 300px;
   width: 300px;
   border: 2px solid var(--color3);
 }
-.form select option{
+
+.form select option {
   background-color: var(--secondary-color);
 }
 
@@ -709,7 +710,7 @@ width: 300px;
 
 .image::before {
   position: absolute;
-  height: 450px;
+  height: 500px;
   content: "";
   inset: 0;
   background-color: rgba(44, 31, 28, 0.9);
@@ -723,7 +724,7 @@ width: 300px;
   margin-top: 0%;
   margin-left: 0%;
   width: 100%;
-  height: 450px;
+  height: 500px;
 }
 
 .container {
@@ -752,7 +753,8 @@ width: 300px;
   color: var(--secondary-color);
   margin: 8px 0;
 }
-.footer-section p strong{
+
+.footer-section p strong {
   font-size: 15px;
 }
 
@@ -828,7 +830,7 @@ form button:hover {
 
 /* --- Responsive design --- */
 
-@media  screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .slider {
     position: relative;
     box-sizing: border-box;
@@ -842,7 +844,7 @@ form button:hover {
     height: 400px;
   }
 
- .menu-icon {
+  .menu-icon {
     margin-right: 8px;
     display: block;
     cursor: pointer;
@@ -853,7 +855,7 @@ form button:hover {
 
     font-size: 28px;
     color: var(--secondary-color);
-  } 
+  }
 
   .header {
     display: flex;
@@ -929,6 +931,7 @@ form button:hover {
   }
 
   .story p {
+    left: 0;
     text-align: left;
     margin: 0% -140%;
     padding: 10px;
@@ -968,10 +971,10 @@ form button:hover {
   }
 
   .version p {
-     padding: -20px; 
-    margin: 0% -10%; 
+    padding: -20px;
+    margin: 0% -10%;
     width: 400px;
-     text-align: left; 
+    text-align: left;
     font-size: 16px;
     /* line-height: 1.1; */
   }
@@ -1041,11 +1044,12 @@ form button:hover {
     top: 70%;
   }
 
-  #menu{
-margin-top:15%;
+  #menu {
+    margin-top: 15%;
     /* width: 100%; */
   }
-   #menu .text1 h1 {
+
+  #menu .text1 h1 {
     font-size: 30px;
   }
 
@@ -1054,115 +1058,128 @@ margin-top:15%;
     display: flex;
     flex-direction: column;
     margin-top: 10%;
-margin-left: -30%;
+    margin-left: -40%;
     text-align: left;
   }
 
-  .item-card{
+  .item-card {
     margin: 10%;
   }
-  
-  
+  .item-card img{
+    margin-top: -15%;
+    
+ }
+
   .menu-section {
     display: flex;
     flex-direction: column;
     margin-left: 20%;
-    gap: 10%;
-    
+    /* gap: 10%; */
+
   }
-  
+
   .menu-section h2 {
     font-size: 25px;
-    margin-left: 25%;
+    margin-left: 15%;
     white-space: nowrap;
   }
+
   .overlay {
-   display: flex;
-   flex-direction: row;
-   color: var(--color2);
-   width: 100%;
-    margin-top: -30%; 
-    margin-left: 20%; 
+    display: flex;
+    flex-direction: column;
+    color: var(--color2);
+    margin: -10px;
+    margin-top: -20%;
+    margin-left: 8%;
   }
-  
-   .overlay h4 {
+
+  .overlay h4 {
     margin-top: -20px;
-   margin-left: 98px;
+    margin-left: 98px;
     font-size: 18px;
     white-space: nowrap;
 
   }
 
-   .overlay p {
+  .overlay p {
     width: 200px;
-    margin: 0% -30%; 
-    font-size: 15px;
-  } 
- 
+    /* margin: 0% -60%; */
+    font-size: 15px; 
+  }
+
   .overlay h5 {
-  margin-top:-8%;
-  margin-left: 5%;
-}   
-.reservation-section img {
-  margin-left: -5%;
-  margin-right: 5%;
- width: 100%;
- height: 800px;
-}
+    margin-top: -8%;
+    margin-left: 8%;
+  } 
 
-.reservation-section::before {
-  content: "";
-  inset: 0;
- margin-left: -5%;
-  margin-right: 10%;
- width: 100%;
- height: 800px;
-   margin-bottom: 10px;
-  margin-left: 10px;
-}
+  .reservation-section img {
+    margin-left: -5%;
+    margin-right: 5%;
+    width: 100%;
+    height: 850px;
+  }
 
-.overlay-content {
-  display: flex;
-  flex-direction: column;
-}
-.reservation{
-  margin-top: -15%;
-  margin-left: -30%;
-}
- .form{
-  margin-left: -30%;
-} 
-.form h1{
-  margin-top: 40%;
-  white-space: nowrap;
-  font-size: 30px;
-  margin-left: 15%;
-}
+  .reservation-section::before {
+    content: "";
+    inset: 0;
+    margin-left: -5%;
+    margin-right: 5%;
+    width: 100%;
+    height: 850px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+  }
 
-.image::before {
-width: 100%;
-  height: 1000px;
-  content: "";
-  inset: 0;
-}
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-.footer img {
-  width: 100%;
-  height: 1000px;
-}
-.footer-section{
-  display: flex;
-  flex-direction: column;
-  margin-top: 5%;
-}
-.social-icons i{
-padding: 5px;
-}
-.footer-section h3{
-  font-size: 20px;
-}
-.footer-bottom {
-margin-left: 5%;
-font-size: 15px;
-}
+  .reservation {
+    margin-top: -15%;
+    width: 200px;
+    margin-left: -30%;
+  }
+
+  .form {
+    margin-left: -30%;
+  }
+
+  .form h1 {
+    margin-top: 40%;
+    white-space: nowrap;
+    font-size: 30px;
+    margin-left: 15%;
+  }
+
+  .image::before {
+    width: 100%;
+    height: 190vh;
+    content: "";
+    inset: 0;
+  }
+
+  .footer img {
+    width: 100%;
+    height: 190vh;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .social-icons i {
+    padding: 5px;
+  }
+
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-bottom {
+    margin-left: 5%;
+    font-size: 15px;
+  }
 }
