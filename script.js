@@ -28,9 +28,24 @@ showSlide(index);
 
 //  menu-button 
 
-  const toggleBtn = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
+  // const toggleBtn = document.getElementById('menu-toggle');
+  // const navMenu = document.getElementById('nav-menu');
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
+  // toggleBtn.addEventListener('click', () => {
+  //   navMenu.classList.toggle('show');
+  //   var imgContainer = document.querySelector(".image-container");
+  //   imgContainer.classList.toggle("image-down");
+  // });
+
+      // function toggleMenu() {
+      // var nav = document.getElementById("navLinks");
+      // nav.classList.toggle("show");
+
+      const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      const imgContainer = document.querySelector(".image-container");
+      imgContainer.classList.toggle("image-down");
+    });

@@ -141,7 +141,7 @@ header .next:hover {
   position: relative;
   color: var(--color);
   font-size: 20px;
-  top: 10px;
+  top: -5px;
   left: 10px;
   text-decoration: none;
   font-size: 50px;
@@ -277,21 +277,23 @@ header .next:hover {
 }
 
 .version h2 {
-  margin-right: 20px;
+  text-align: left;
   margin-top: -15px;
   color: var(--primary-color);
   font-size: 30px;
 }
 
 .version p {
+  color: var(--color2);
+  width: 300px;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .style p {
   font-size: 20px;
-  color: var(--primary-color);
-  font-weight: 300;
+  color: var(--color2);
+width: 300px;
 }
 
 .btn2 {
@@ -301,6 +303,7 @@ header .next:hover {
   background-color: var(--color);
   color: var(--primary-color);
   border: none;
+  margin-right: 50%;
   font-size: 18px;
 }
 
@@ -367,15 +370,16 @@ header .next:hover {
 }
 
 .card h1 {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--primary-color);
   margin-bottom: -3px;
 }
 
 .card p {
   color: var(--color2);
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 15px;
+  width: 300px;
+  line-height: 1.1;
   word-wrap: break-word;
   word-break: break-word;
 }
@@ -498,7 +502,7 @@ header .next:hover {
 }
 
 .menu-section {
-  width: 45%;
+
   display: flex;
   flex-wrap: flex-start;
   flex-direction: column;
@@ -514,7 +518,8 @@ header .next:hover {
 
 .item-card {
   position: relative;
-  margin-bottom: 30px;
+  margin-left: -20%;
+  margin-bottom: 20px;
 }
 
 .item-card img {
@@ -526,23 +531,24 @@ header .next:hover {
 .overlay {
   color: var(--color2);
   width: 100%;
-  margin-top: -35%;
-  margin-left: 10%;
+  margin-top: -50%;
+  margin-left: 25%;
 }
 
 .overlay h4 {
   text-align: center;
-  margin-top: -15%;
+  margin-top: 5%;
+  margin-left: 15%;
   font-size: 20px;
   color: var(--primary-color);
 }
 
 .overlay p {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-  margin-left: 40%;
-  width: 300px;
-  line-height: 1.4;
+  margin-left: 25%;
+  width: 250px;
+  line-height: 1.1;
 }
 
 .overlay h5 {
@@ -550,10 +556,10 @@ header .next:hover {
   background-color: var(--color);
   color: var(--primary-color);
   border-radius: 50%;
-  padding: 15px;
-  margin-top: -50px;
-  margin-left: 20%;
-  font-size: 20px;
+  padding: 8px;
+  margin-top: -10px;
+  margin-left: 12%;
+  font-size: 18px;
 }
 
 /* --- reservation-section --- */
@@ -574,7 +580,7 @@ header .next:hover {
   width: 70%;
   height: 500px;
   margin-bottom: 10px;
-  margin-left: 10px;
+  margin-left: -50%;
   margin: 45px 18%;
   padding: 8px;
   background-color: rgba(44, 31, 28, 0.9);
@@ -703,7 +709,7 @@ header .next:hover {
 
 .image::before {
   position: absolute;
-  height: 500px;
+  height: 450px;
   content: "";
   inset: 0;
   background-color: rgba(44, 31, 28, 0.9);
@@ -717,7 +723,7 @@ header .next:hover {
   margin-top: 0%;
   margin-left: 0%;
   width: 100%;
-  height: 500px;
+  height: 450px;
 }
 
 .container {
@@ -822,7 +828,7 @@ form button:hover {
 
 /* --- Responsive design --- */
 
-@media only screen and (max-width: 768px) {
+@media  screen and (max-width: 768px ) {
   .slider {
     position: relative;
     box-sizing: border-box;
@@ -836,7 +842,7 @@ form button:hover {
     height: 400px;
   }
 
-  .menu-icon {
+ .menu-icon {
     margin-right: 8px;
     display: block;
     cursor: pointer;
@@ -847,7 +853,7 @@ form button:hover {
 
     font-size: 28px;
     color: var(--secondary-color);
-  }
+  } 
 
   .header {
     display: flex;
@@ -922,9 +928,11 @@ form button:hover {
   }
 
   .story p {
+    text-align: left;
     margin: 0% -140%;
     padding: 10px;
     font-size: 15px;
+    width: 400px;
   }
 
   .story p span {
@@ -959,9 +967,12 @@ form button:hover {
   }
 
   .version p {
-    text-align: left;
+     padding: -20px; 
+    margin: 0% -10%; 
+    width: 400px;
+     text-align: left; 
     font-size: 16px;
-    line-height: 1.6;
+    /* line-height: 1.1; */
   }
 
   .btn2 {
@@ -1003,15 +1014,17 @@ form button:hover {
   .card h1 {
     display: block;
     margin-top: -10%;
+    margin-left: 2%;
     white-space: nowrap;
     text-align: center;
   }
 
   .card p {
-    display: block;
+    width: 300px;
+    display: flex;
     flex-wrap: wrap;
     text-align: left;
-    margin-left: -70%;
+    margin-left: -40%;
   }
 
   .special h1 {
@@ -1027,7 +1040,11 @@ form button:hover {
     top: 70%;
   }
 
-  #menu .text1 h1 {
+  #menu{
+margin-top:15%;
+    /* width: 100%; */
+  }
+   #menu .text1 h1 {
     font-size: 30px;
   }
 
@@ -1035,56 +1052,56 @@ form button:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-
+    margin-top: 10%;
+margin-left: -30%;
     text-align: left;
   }
 
-  .overlay {
-    display: flex;
-    flex-direction: row;
-    color: var(--color2);
-    width: 100%;
-    margin-top: -35%;
-    margin-left: 20%;
+  .item-card{
+    margin: 10%;
   }
-
+  
+  
   .menu-section {
     display: flex;
     flex-direction: column;
-    margin-left: -10%;
-
+    margin-left: 20%;
+    gap: 10%;
+    
   }
-
+  
   .menu-section h2 {
     font-size: 25px;
     margin-left: 25%;
-  }
-
-  .item-card h4 {
-    display: block;
-    font-size: 18px;
-    margin-top: -60%;
-    margin-left: 130%;
     white-space: nowrap;
-    text-align: center;
+  }
+  .overlay {
+   display: flex;
+   flex-direction: row;
+   color: var(--color2);
+   width: 100%;
+    margin-top: -30%; 
+    margin-left: 20%; 
+  }
+  
+   .overlay h4 {
+    margin-top: -20px;
+   margin-left: 98px;
+    font-size: 18px;
+    white-space: nowrap;
+
   }
 
-  .item-card p {
-    margin-top: -10%;
-    margin-right: -20%;
-    width: 100%;
-    margin: -40% -85%;
-    padding: -50px;
+   .overlay p {
+    width: 200px;
+    margin: 0% -30%; 
     font-size: 15px;
-  }
-
+  } 
+ 
   .overlay h5 {
-  padding: 15px;
-  margin-top: -60%;
-  margin-left: 60%;
-  font-size: 20px;
-}
-
+  margin-top:-8%;
+  margin-left: 5%;
+}   
 .reservation-section img {
   margin-left: -5%;
   margin-right: 10%;
