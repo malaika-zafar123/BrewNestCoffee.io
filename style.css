@@ -42,6 +42,12 @@ body {
   min-width: 100%;
   overflow: hidden;
 }
+.slide img {
+  transition: transform 0.6s ease;
+}
+.slide.show img {
+  transform: translateY(100%);
+}
 
 .slide img {
   width: 100%;
@@ -102,11 +108,10 @@ header .next:hover {
 
 .text {
   position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 40%;
   text-align: center;
-  color: rgb(247, 246, 246);
+  color: var(--secondary-color);
   z-index: 2;
 }
 
@@ -182,7 +187,9 @@ header .next:hover {
 .header ul li a:hover {
   color: var(--color);
 }
-
+.menu-icon{
+  display: none;
+}
 
 
 /*--- about-section --- */
@@ -378,7 +385,7 @@ header .next:hover {
 .card p {
   color: var(--color2);
   font-size: 15px;
-  width: 300px;
+  width: 200px;
   line-height: 1.1;
   word-wrap: break-word;
   word-break: break-word;
@@ -404,12 +411,13 @@ header .next:hover {
   width: 100%;
   height: 400PX;
   filter: blur(4px);
+  object-fit: cover;
 }
 
 .special::before {
   content: "";
   inset: 0;
-  background-color: rgba(56, 35, 30, 0.8);
+  background-color: rgba(56, 35, 30, 0.7);
   position: absolute;
   z-index: 2;
 }
@@ -496,6 +504,7 @@ header .next:hover {
 .overlay-content1 {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   box-sizing: border-box;
   text-align: left;
@@ -583,7 +592,7 @@ header .next:hover {
   margin-left: -50%;
   margin: 45px 18%;
   padding: 8px;
-  background-color: rgba(44, 31, 28, 0.9);
+  background-color: rgba(44, 31, 28, 0.7);
   backdrop-filter: blur(5px);
   z-index: 2;
   position: absolute;
@@ -592,6 +601,7 @@ header .next:hover {
 .reservation-section img {
   margin: 20px 16%;
   position: absolute;
+  object-fit: cover;
   width: 70%;
   height: 500px;
   box-shadow: rgb(56, 40, 37);
@@ -713,13 +723,14 @@ header .next:hover {
   height: 500px;
   content: "";
   inset: 0;
-  background-color: rgba(44, 31, 28, 0.9);
+  background-color: rgba(44, 31, 28, 0.7);
   filter: blur(5px);
   z-index: 2;
 
 }
 
 .footer img {
+  object-fit: cover;
   position: absolute;
   margin-top: 0%;
   margin-left: 0%;
@@ -831,7 +842,8 @@ form button:hover {
 /* --- Responsive design --- */
 
 @media screen and (max-width: 768px) {
-  .slider {
+  /* .slider {
+    margin-top: 40%;
     position: relative;
     box-sizing: border-box;
     width: 100%;
@@ -842,17 +854,28 @@ form button:hover {
   .slide image {
     width: 100%;
     height: 400px;
+  } */
+
+    .menu-icon {
+    display: block;
+    /* z-index: 3; */
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
   }
 
-  .menu-icon {
-    margin-right: 8px;
-    display: block;
-    cursor: pointer;
-    z-index: 10;
+  #nav-menu.show {
+    display: flex;
   }
+  /* .slide.show img {
+    transform: translateY(100%);
+  } */
+
+/* .slide img {
+  transition: all 0.6s ease;
+} */
 
   .menu-icon i {
-
     font-size: 28px;
     color: var(--secondary-color);
   }
@@ -870,7 +893,7 @@ form button:hover {
 
   header .prev,
   header .next {
-    margin-top: -20px;
+    margin-top: 30%;
     font-size: 15px;
   }
 
@@ -1089,11 +1112,11 @@ form button:hover {
     flex-direction: column;
     color: var(--color2);
     margin: -10px;
-    margin-top: -20%;
-    margin-left: 8%;
+    margin-top: -40%;
+    margin-left: 10%;
   }
 
-  .overlay h4 {
+  /* .overlay h4 {
     margin-top: -20px;
     margin-left: 98px;
     font-size: 18px;
@@ -1103,14 +1126,14 @@ form button:hover {
 
   .overlay p {
     width: 200px;
-    /* margin: 0% -60%; */
+    /* margin: 0% -60%; 
     font-size: 15px; 
   }
 
   .overlay h5 {
     margin-top: -8%;
     margin-left: 8%;
-  } 
+  }  */
 
   .reservation-section img {
     margin-left: -5%;

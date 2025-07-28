@@ -8,27 +8,34 @@
   <link rel="stylesheet" href="indexAbout.css">
 </head>
 <body>
-    <header>
-    <div class="slide active">
+  <header>
+    <div class="header">
+      <div class="nav">
+        <div class="div">
+          <h1><a href="/">BrewNest</a></h1>
+        </div>
+        <ul id="userList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="indexAbout.html">About</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="indexContact.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-toggle">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <div class="slide active">
           <img src="image/img-text.jpg" alt="Slide 1">
-
-          <div class="header">
-            <h1><a href="/">BrewNest</a></h1>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="indexAbout.html">About</a></li>
-              <li><a href="service.html">Service</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="indexContact.html">Contact</a></li>
-            </ul>
-          </div>
-
+        </div>
+        
           <div class="text">
             <h2>About Us</h2>
             <h3>Home / About</h3>
           </div>
         </div>
-        </div>
+      </div>
+          
+    </div>
     </header>
     <!--End header-->
 
@@ -129,6 +136,21 @@
     </footer>
 
     <!--End Footer-->
+    <script>
+      let userList = document.getElementById("userList")
+      userList.style.maxHeight = "0px";
+
+      function toggleMenu(){
+        if(userList.style.maxHeight == "0px")
+        {
+          userList.style.maxHeight = "300px";
+        }
+        else{
+          userList.style.maxHeight = "0px";
+        }
+      }
+
+    </script>
 
 </body>
 </html>
