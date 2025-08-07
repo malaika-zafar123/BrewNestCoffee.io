@@ -573,7 +573,6 @@ header .next:hover {
 
 /* --- reservation-section --- */
 
-
 .reservation-section {
   position: relative;
   width: 100%;
@@ -583,44 +582,38 @@ header .next:hover {
   padding: 40px;
 }
 
-.reservation-section::before {
-  background-color: rgba(44, 31, 28, 0.7);
-  inset: 0;
-  content: "";
-   width: 70%;
-  height: 500px;
-  margin-bottom: 10px;
-  margin-left: -50%; 
-   margin: 38px 19%;
-  padding: 8px; 
-  /* backdrop-filter: blur(5px); */
-   z-index: 2;
-   position: absolute; 
-}
-
 .reservation-section img {
-  margin: 20px 16%;
   position: absolute;
-  object-fit: cover;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 70%;
   height: 500px;
-  box-shadow: rgb(56, 40, 37);
+  object-fit: cover;
+  z-index: 1;
+
 }
 
 .overlay-content {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 500px;
+  background-color: rgba(44, 31, 28, 0.6); 
   display: flex;
-  height: 150%;
   justify-content: space-between;
-  margin-left: 15%;
+  align-items: center;
   padding: 40px;
+  z-index: 2;
   box-sizing: border-box;
 }
 
 .reservation {
   flex: 1;
-  backdrop-filter: blur(2px);
+  margin-right: 40px;
+  color: var(--secondary-color);
 }
 
 .reservation h3 {
@@ -655,20 +648,13 @@ header .next:hover {
   margin-right: 10px;
 }
 
-
 .form {
-  margin-top: 0;
-  width: 20%;
-  height: 100%;
-  flex: 1;
-  gap: 40px;
+  width: 40%;
 }
 
 .form h1 {
-  margin-right: 50%;
   color: var(--secondary-color);
   text-align: center;
-  white-space: nowrap;
   margin-bottom: 20px;
 }
 
@@ -676,17 +662,16 @@ header .next:hover {
 .form select {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  top: 20%;
   display: block;
-  margin: 10px;
+  margin: 10px auto;
   padding: 12px;
-  margin-bottom: 15px;
-  width: 300px;
+  width: 100%;
   border: 2px solid var(--color3);
 }
 
 .form select option {
   background-color: var(--secondary-color);
+  color: var(--color2);
 }
 
 .form input:focus,
@@ -696,9 +681,7 @@ header .next:hover {
 }
 
 .form button {
-  margin-bottom: 20px;
-  width: 300px;
-  margin: 9px;
+  width: 100%;
   padding: 13px;
   background-color: var(--color);
   color: var(--primary-color);
@@ -710,6 +693,7 @@ header .next:hover {
 .form button:hover {
   background-color: var(--text-color);
 }
+
 
 /* --- footer-section ---  */
 .footer {
