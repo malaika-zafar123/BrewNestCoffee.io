@@ -161,14 +161,16 @@ body {
 
 .item-card {
   position: relative;
-  margin-left: -60%;
   margin-bottom: 20px;
-  margin: 15px;
+  
 }
 
 .item-card img {
-  margin: 15px;
+  width: 200Px;
+  height: 200px;
+  /* margin: 15px; */
   padding: 15px;
+  margin-left: -45%;
   border-radius: 120%;
 }
 
@@ -176,19 +178,20 @@ body {
   color: var(--color2);
   width: 100%;
   margin-top: -90%;
-  margin-left: 65%;
+  margin-left: 42%;
 }
 
 .overlay h4 {
   text-align: center;
-  margin-left: 20%; 
+  margin-left: 15%; 
   font-size: 20px;
+  white-space: none;
   color: var(--primary-color);
 }
 
 .overlay p {
   font-size: 16px;
-   margin-left: 28%; 
+   margin-left: 20%; 
   width: 200px;
   line-height: 1.1;
 }
@@ -199,8 +202,8 @@ body {
   color: var(--primary-color);
   border-radius: 50%;
   padding: 8px;
-  margin-top: -10px;
-  margin-left: 12%;
+  margin-top: -15px;
+  margin-left: -8%;
   font-size: 18px;
 }
 
