@@ -1,39 +1,46 @@
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 let index = 0;
 
 function showSlide(i) {
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[i].classList.add('active');
-  document.querySelector('.slides').style.transform = `translateX(-${i * 100}%)`;
+  if (i < 0) {
+    index = slide.length - 1;
+  } else if (i >= slide.length) {
+    index = 0;
+  } else {
+    index = i;
+  }
+  slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
 prev.addEventListener('click', () => {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
+  showSlide(index - 1);
 });
 
 next.addEventListener('click', () => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
+  showSlide(index + 1);
 });
 
+// Auto Slide (5 sec)
 setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
+  showSlide(index + 1);
 }, 5000);
 
+// First slide
 showSlide(index);
+
 
 //  menu-button 
 
 
-   const toggleBtn = document.getElementById('menu-toggle');
-   const navMenu = document.getElementById('nav-menu');
-   toggleBtn.addEventListener('click', () => {
-     navMenu.classList.toggle('show');
-  
-   });
 
- 
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  const slider = document.querySelector(".slider");
+
+  menu.classList.toggle("show");
+  slider.classList.toggle("move-down"); // text ko neeche push karega
+}
+
